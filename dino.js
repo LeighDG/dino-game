@@ -77,6 +77,7 @@ window.onload = function () {
     }
 
     document.addEventListener('keydown', moveDino);
+    document.getElementById('touch-area').addEventListener('touchstart', moveDino, false);
 
     // Add event listener for the reset button
     document.getElementById("reset").addEventListener('click', resetGame);
@@ -157,7 +158,7 @@ function update() {
 function moveDino(e) {
     if (gameOver) { return; }
 
-    if ((e.code == 'Space' || e.code == 'ArrowUp') && dino.y == dinoY) {
+    if ((e.code == 'Space' || e.code == 'ArrowUp'|| e.touches[0]) && dino.y == dinoY) {
         //jump
         velocityY = -10;
     }
