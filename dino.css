@@ -12,3 +12,11 @@ body {
 button {
     align-items: center;
 }
+
+#touch-area {
+    width: 100vw;
+    height: 20vh;
+    background-color: lightgrey;
+    line-height: 100vh;
+    user-select: none;
+}
